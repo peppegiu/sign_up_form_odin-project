@@ -3,9 +3,132 @@
     src: url(./fonts/Norse-Bold.otf);
 }
 
+@font-face {
+    font-family: ubuntu;
+    src: url(./fonts/Ubuntu-Title.ttf);
+}
 
+@font-face {
+    font-family: 'Lato';
+    src: url('./fonts/transfonter.org-20250609-041022/Lato-Black.woff2') format('woff2'),
+        url('./fonts/transfonter.org-20250609-041022/Lato-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
 
+@font-face {
+    font-family: 'Lato';
+    src: url('./fonts/transfonter.org-20250609-041022/Lato-Regular.woff2') format('woff2'),
+        url('./fonts/transfonter.org-20250609-041022/Lato-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Yamtramanav;
+    src: url(./fonts/Yantramanav-Medium/yantramanav/Yantramanav-Black.ttf);
+}
+
+@font-face {
+    font-family: Yamtramanav;
+    src: url(./fonts/Yantramanav-Medium/yantramanav/Yantramanav-Medium.ttf);
+}
+
+:root {
+    font-size: 16px;
+    font-family: Lato;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 1.3rem;
+    max-width: 66ch;
+    letter-spacing: 1px;
+}
+
+button, input {
+    font: inherit;
+}
 
 body {
+    display: flex;
+    flex-direction: row;
     font-family: 16px;
+}
+
+.banner-background {
+    width: 30vw;
+    height: 100vh;
+    border: 2px solid black;
+    background-image: url(./assets/leaves.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;   
+}
+
+.banner-background .logo {
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 200px;
+    position: relative;
+    top: 130px;
+    display: flex;
+    justify-content: center;   
+}
+
+.banner-background .logo img {
+    position: absolute;
+}
+
+main {
+    margin-top: 150px;
+    padding-left: 100px;
+    padding-right: auto;
+}
+
+main .login {
+    height: 400px;
+}
+
+main .login fieldset {
+    display: flex;
+    gap: 80px;
+    position: relative;
+    border: none;
+    padding: 0;
+    width: 100%;
+}
+
+main .login {
+    margin-top: 70px;
+}
+
+main .login form {
+    width: 100%;
+}
+
+main .login fieldset:last-of-type {
+    border-bottom: 1px solid gray;
+    margin-bottom: 80px;
+}
+
+main .login form fieldset label {
+    position: absolute;
+    top: -4px;
+    font-family: Yamtramanav;
+}
+
+main .login form fieldset input {
+    border: 3px #E5E7EB solid;
+    width: 220px;
+    height: 25px;
+    border-radius: 5px;
+}
+
+main .login form button {
+    background-color: #596D48;
+    color: white;
+    padding: 15px 50px;
+    border-radius: 10px;
+    font-size: 1.2rem;
 }
