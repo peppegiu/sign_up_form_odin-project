@@ -20,18 +20,38 @@
         </div>
         <div class="login">
             <h1>Let's do this!</h1>
+            <p>Inputs sucedding with a * is required</p>
             <form action="">
                 <fieldset>
-                    <p><label for="first-name">First name</label><input id="first-name" name="first-name" type="text"></p>
-                    <p><label for="last-name">Last name</label><input id="last-name" name="last-name" type="text"></p>
+                    <p>
+                        <label for="first-name">First name*</label>
+                        <input id="first-name" name="first-name" type="text" required>
+                    </p>
+                    <p>
+                        <label for="last-name">Last name*</label>
+                        <input id="last-name" name="last-name" type="text" required>
+                    </p>
                 </fieldset>
                 <fieldset>
-                    <p><label for="e-mail">E-mail</label><input id="e-mail" name="e-mail" type="email"></p>
-                    <p><label for="phone">Phone number</label><input id="phone" name="phone" type="tel"></p>
+                    <p>
+                        <label for="e-mail">E-mail*</label>
+                        <input id="e-mail" name="e-mail" type="email" required>
+                    </p>
+                    <p>
+                        <label for="phone">Phone number</label>
+                        <input id="phone" name="phone" type="tel">
+                        <label id="info">- Supported BR number format 00 00000-0000</label>
+                    </p>
                 </fieldset>
                 <fieldset>
-                    <p><label for="pwd">Password</label><input id="pwd" name="pwd" type="password"></p>
-                    <p><label for="cf-pwd">Confirm Password</label><input id="cf-pwd" name="cf-pwd" type="password"></p>
+                    <p>
+                        <label for="pwd">Password*</label>
+                        <input id="pwd" name="pwd" type="password" pattern="^[\w\W]{5,30}$" required>
+                    </p>
+                    <p>
+                        <label for="cf-pwd">Confirm Password*</label>
+                        <input id="cf-pwd" name="cf-pwd" type="password" pattern="^[\w\W]{5,30}$" required>
+                    </p>
                 </fieldset>
 
                 <div class="submit">

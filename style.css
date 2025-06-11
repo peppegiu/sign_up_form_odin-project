@@ -1,3 +1,8 @@
+* {
+    box-sizing: border-box;
+}
+
+
 @font-face {
     font-family: norse-bold;
     src: url(./fonts/Norse-Bold.otf);
@@ -125,10 +130,45 @@ main .login form fieldset input {
     border-radius: 5px;
 }
 
+input:invalid {
+    border: 3px red solid !important;
+}
+
+input:focus {
+    box-shadow: darkblue 3px solid !important;
+    border: 3px solid blue !important;
+
+    border-width: 2px;
+    outline: none;
+}
+
+label:has(+ input[type="email"]:invalid)::after {
+    color: red;
+    margin-left: 75px;
+    content: "Please insert a @";
+}
+
+label:has(+ input[type="password"]:invalid)::after {
+    color: red;
+    margin-left: 25px;
+    content: "Max characters: 5; min: 25";
+}
+
 main .login form button {
     background-color: #596D48;
     color: white;
     padding: 15px 50px;
     border-radius: 10px;
     font-size: 1.2rem;
+}
+
+form fieldset {
+    margin-bottom: 30px;
+}
+
+form fieldset:nth-of-type(2) label:last-child  {
+    position: relative;
+    top: 30px;
+    left: -220px;
+    color: gray;
 }
